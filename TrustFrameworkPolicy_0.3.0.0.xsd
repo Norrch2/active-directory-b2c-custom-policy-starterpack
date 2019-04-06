@@ -116,6 +116,13 @@
                         </xs:documentation>
                       </xs:annotation>
                     </xs:element>
+                    <xs:element name="ScriptExecution" type="tfp:ScriptExecutionType" minOccurs="0" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>
+                          Controls whether JavaScript is enabled or disabled.
+                        </xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
                     <xs:element name="SessionExpiryInSeconds" type="xs:int" minOccurs="0" maxOccurs="1">
                       <xs:annotation>
                         <xs:documentation>
@@ -2295,4 +2302,16 @@
     </xs:restriction>
   </xs:simpleType>
 
+
+  <xs:simpleType name="ScriptExecutionType">
+    <xs:annotation>
+      <xs:documentation>
+        The names of the valid values for Script Execution.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Allow" />
+    </xs:restriction>
+  </xs:simpleType>
+  
 </xs:schema>
